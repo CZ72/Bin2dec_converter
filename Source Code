@@ -1,0 +1,31 @@
+#Leonard Cherkashin 1.1.2024
+#Binary To decimal converter level 1
+
+User_input=input("Input binary here:")
+Num_user_input=int(User_input)
+list=[int(digit) for digit in User_input]
+#this turns the user's input into a list
+
+Grand_total=0
+Multiplier=0
+
+list.reverse()
+#This function reverses the list, since binary is read from right to left, and lists are read from left to right.
+
+for number in list:
+    number=int(number)
+    if number==1:
+        Grand_total+=2**Multiplier
+        Multiplier+=1
+    elif number==0:
+        Grand_total+=0
+        Multiplier+=1
+    else:
+        print("Can only take 0s and 1s")
+        exit()
+    
+print(Grand_total)
+
+ 
+
+
